@@ -37,8 +37,8 @@ export default function Home() {
       <h1>hello</h1>
       {view ()}
     </div>
-    <div className=" mb-0 ml-0 mr-0 bg-transparent fixed bottom-0">
-    <div className="bg-white max-h-[4.4rem] w-[95%] px-6 ml-auto mr-auto rounded-t-xl lg:hidden md:hidden">
+    <div className=" w-[100%] mb-0 ml-0 mr-0 bg-transparent fixed bottom-0">
+    <div className="bg-white max-h-[4.4rem] w-[100] px-6  rounded-t-xl lg:hidden md:hidden">
       <ul className="flex relative">
           
           <span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-5`}>
