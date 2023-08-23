@@ -7,10 +7,10 @@ export default function Home() {
   const [active, setActive] = useState(0)
    const Menus = [
       {name: 'Home', icon: 'home' , dis: 'translate-x-0', ref: ''},
-      {name: 'Swap', icon: 'swap' , dis: 'translate-x-16', ref: 'swap'},
-      {name: 'Earn', icon: 'leaf' , dis: 'translate-x-32', ref: 'earn'},
-      {name: 'Mint', icon: 'water' , dis: 'translate-x-48', ref: 'mint'},
-      {name: 'Wallet', icon: 'wallet' , dis: 'translate-x-64', ref: 'wallet'},
+      {name: 'Swap', icon: 'swap' , dis: 'translate-x-22', ref: 'swap'},
+      {name: 'Earn', icon: 'leaf' , dis: 'translate-x-36', ref: 'earn'},
+      {name: 'Mint', icon: 'water' , dis: 'translate-x-52', ref: 'mint'},
+      {name: 'Wallet', icon: 'wallet' , dis: 'translate-x-70', ref: 'wallet'},
   ]
 
   const view = () => {
@@ -42,8 +42,8 @@ export default function Home() {
       <ul className="flex relative">
           
           <span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-5`}>
-             <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[18px] rounded-tr-[11px] shadow-myShadow1" ></span>
-             <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -right-[18px] rounded-tl-[11px] shadow-myShadow2"></span>
+             <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[20px] rounded-tr-[11px] shadow-myShadow1" ></span>
+             <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -right-[20px] rounded-tl-[11px] shadow-myShadow2"></span>
           </span>
           {Menus.map((menu, i) => (
               <li key={i} className="w-20">
