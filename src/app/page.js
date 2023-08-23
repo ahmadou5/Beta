@@ -13,7 +13,7 @@ export default function Home() {
       {name: 'Wallet', icon: 'wallet' , dis: 'translate-x-64', ref: 'wallet'},
   ]
 
-  const view = () => {
+  const  view =  () => {
     if( active === 0) {
       return(<h1>Home page</h1>)
     }
@@ -35,7 +35,7 @@ export default function Home() {
   <div>
     <div className="h-[80%] w-[100%] mb-auto">
       <h1>hello</h1>
-      {view ()}
+      {view}
     </div>
     <div className=" mb-0 ml-0 mr-0 bg-transparent fixed bottom-0">
     <div className="bg-white max-h-[4.4rem] px-6 ml-1 mr-1 rounded-t-xl lg:hidden md:hidden">
