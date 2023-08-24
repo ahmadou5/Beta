@@ -12,10 +12,25 @@ export default function Home() {
       {name: 'Mint', icon: 'water' , dis: 'translate-x-45', ref: 'mint'},
       {name: 'Wallet', icon: 'wallet' , dis: 'translate-x-65', ref: 'wallet'},
   ]
-
+  const hello = () => {
+    if( active === 0) {
+      return(<>
+      <div className="ml-6 mr-6 mt-5 bg-inherit text-start text-ellipsis text-4xl">
+        <h1 className="text-white font-thin font-sans">Hello</h1>
+      </div>
+      </>
+      )
+    }
+  }
   const view = () => {
     if( active === 0) {
-      return(<h1>Home page</h1>)
+      return(
+      <div>
+          <div className="w-[90%] ml-auto mr-auto mt-2 bg-slate-600 max-h-[5rem]">
+            <p>ggg</p>
+          </div>
+      </div>
+      )
     }
     if( active && active === 1) {
       return(<h1>Swap page</h1>)
@@ -31,14 +46,16 @@ export default function Home() {
     }
     else return 404;
   }
+  
+  
   return(
   <div>
     <div className="h-[80%] w-[100%] mb-auto">
-      <h1>hello</h1>
+      {hello ()}
       {view ()}
     </div>
     <div className=" mb-0 ml-0 mr-0 bg-transparent fixed bottom-0 w-full">
-    <div className="bg-white max-h-[4.4rem] w-[95%] px-6 ml-auto mr-auto rounded-t-xl lg:hidden md:hidden">
+    <div className="bg-slate-700 max-h-[4rem] w-[95%] px-6 ml-auto mr-auto rounded-t-xl lg:hidden md:hidden">
       <ul className="flex relative">
           
           {/**<span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-6`}>
@@ -46,10 +63,10 @@ export default function Home() {
              <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -right-[18px] rounded-tl-[11px] shadow-myShadow2"></span>
   </span>**/}
           {Menus.map((menu, i) => (
-              <li key={i} className="w-16">
+              <li key={i} className="w-20">
                   <div className=" flex flex-col text-center pt-6 " onClick={() => {setActive(i)}}>
-                     <span className={`text-xl cursor-pointer duration-500 ${i === active && '-mt-6 text-white'}`}><ion-icon name={menu.icon}></ion-icon></span>
-                     <span className={` ${active === i ? 'translate-y-0 duration-700 text-blue-600 opacity-100' : 'opacity-0 translate-y-14'}`}>{menu.name}</span>
+                     <span className={`text-xl cursor-pointer duration-500 ${i === active && '-mt-6 text-slate-700'}`}><ion-icon name={menu.icon}></ion-icon></span>
+                     <span className={` -mt-1 ${active === i ? 'translate-y-0 duration-700 text-blue-400 opacity-100' : 'opacity-0 translate-y-15'}`}>{menu.name}</span>
                   </div> 
               </li>
           ))}
