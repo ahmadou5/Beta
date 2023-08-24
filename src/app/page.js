@@ -41,10 +41,10 @@ export default function Home() {
     <div className="bg-white max-h-[4.4rem] w-[95%] px-6 ml-auto mr-auto rounded-t-xl lg:hidden md:hidden">
       <ul className="flex relative">
           
-          <span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-5`}>
+          {/**<span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-5`}>
              <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[18px] rounded-tr-[11px] shadow-myShadow1" ></span>
              <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -right-[18px] rounded-tl-[11px] shadow-myShadow2"></span>
-          </span>
+  </span>**/}
           {Menus.map((menu, i) => (
               <li key={i} className="w-20">
                   <div className=" flex flex-col text-center pt-6 " onClick={() => {setActive(i)}}>
