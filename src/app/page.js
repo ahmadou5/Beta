@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [active, setActive] = useState(0)
-   const Menus = [
+  const Menus = [
       {name: 'Home', icon: 'home' , dis: 'translate-x-0', ref: ''},
       {name: 'Swap', icon: 'swap' , dis: 'translate-x-15', ref: 'swap'},
       {name: 'Earn', icon: 'leaf' , dis: 'translate-x-31', ref: 'earn'},
@@ -39,15 +39,54 @@ export default function Home() {
                 <img className='ml-auto mr-auto w-[95%] h-[50%]' src='./trade.png' />
               </div>
               <div className="mt-5 bg-[#0B0E11] flex items-center w-[99%] h-[10rem] py-1 px-1  rounded-md">
-                <p className="py-1 px-1 font-thin">Experience the future of earning with YieldZone Stake securely, earn effortlessly, and shape the decentralized landscape. Unleash your assets' potential today for rewards tomorrow</p>
+                <p className="py-1 px-1 text-center font-bold">Experience the future of earning with YieldZone Stake securely, earn effortlessly, and shape the decentralized landscape. Unleash your assets' potential today for rewards tomorrow</p>
               </div>
             </div>
           </div>
-          <div className=" ml-auto mr-auto text-sm flex items-center">
-            <button className="w-40 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] hover:rounded-2xl"> Explore </button>
+          <div className=" ml-auto mt-10 mb-14 mr-auto text-sm flex items-center">
+              <button className="w-40 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] hover:rounded-2xl"> Explore </button>
           </div>
-          <div className="bg-[#0B0E11] max-h-[6rem] h-6 w-[100%] px-6 ml-auto mt-20 mr-auto rounded-xl lg:hidden md:hidden">
-            <div className="h-[5rem]">gg</div>
+          <div style={{'background-image':'url(./uu.png)','backgroundRepeat':'no-repeat', 'backgroundSize':'cover'}} className="mt-8 mb-9">
+            <div className="w-[100%] mt-5 ">
+              <div className="py-4 px-4 ">
+                <div className=" w-20 h-20 ml-8 bg-[#0B0E11] rounded-full ">
+                  <img className='' src='./invest.png' />
+                </div>
+                <div className="mt-3 mr-auto ml-auto bg-[#0B0E11] flex items-center w-56 h-56 py-1 px-1  rounded-full">
+                  <p className="py-1 px-1 text-center font-bold">Invest in the Most Safe Place</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[100%] mt-5 ">
+              <div className="py-4 px-4 ">
+                <div className=" w-20 h-20 ml-8 bg-[#0B0E11] rounded-full ">
+                  <img className='' src='./invest.png' />
+                </div>
+                <div className="mt-3 mr-auto ml-auto bg-[#0B0E11] flex items-center w-56 h-56 py-1 px-1  rounded-full">
+                  <p className="py-1 px-1 text-center font-bold">Invest in the Most Safe Place</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[100%] mt-5 ">
+              <div className="py-4 px-4 ">
+                <div className=" w-20 h-20 ml-8 bg-[#0B0E11] rounded-full ">
+                  <img className='' src='./invest.png' />
+                </div>
+                <div className="mt-3 mr-auto ml-auto bg-[#0B0E11] flex items-center w-56 h-56 py-1 px-1  rounded-full">
+                  <p className="py-1 px-1 text-center font-bold">Invest in the Most Safe Place</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div className="bg-[#0B0E11] mb-40 h-25 w-[95%] flex items-center px-2 py-2 ml-auto mt-20 mr-auto rounded-md lg:hidden md:hidden">
+            <div className="h-[5rem]  w-[90%]">
+              <p>USDT</p>
+              <p>80k</p>
+            </div>
           </div>
       </div>
       )
