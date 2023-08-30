@@ -1,7 +1,9 @@
 "use client";
-import { Nav } from "@/components/Nav";
 
+
+import { Web3Button } from "@web3modal/react";
 import { useState } from "react";
+import TypewriterComponent from "typewriter-effect";
 
 export default function Home() {
   const [active, setActive] = useState(0);
@@ -44,11 +46,20 @@ export default function Home() {
     if (active === 0) {
       return (
         <>
+      
           <div className="ml-6 mr-6 mt-20 mb-5 bg-inherit items-center text-start text-ellipsis text-4xl">
             <h1 className="text-white font-bold ">👋🏽 Welcome to</h1>
-
-            <h1 className="text-[#359cfc] font-bold ">YieldZone</h1>
-
+            <div className=" text-[#359cfc] font-bold ">
+            <TypewriterComponent
+              className=' text-ellipsis  font-bold'
+              options={{
+                strings:['YieldZone.', 'SafeZone.', 'EarnZone.'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+            </div>
+            
             {/**  <div className=" ml-auto mr-3 text-sm items-end">
           <button className="w-40 h-10 py-1 px-1 rounded-3xl bg-[#359cfc] drop-shadow-3xl shadow-3xl hover:bg-[#589ee0] hover:rounded-2xl"> Connect Wallet </button>
       </div>**/}
@@ -81,6 +92,7 @@ export default function Home() {
               {" "}
               Explore{" "}
             </button>
+            <Web3Button />
           </div>
           {Mores.map((more, i) => (
             <div
@@ -131,18 +143,25 @@ export default function Home() {
       return <h1>MInt page</h1>;
     }
     if (active && active === 4) {
-      return <h1>wallett page</h1>;
+      return (
+      <div className="flex items-end justify-center ">
+        <p>Wallet Connect</p>
+        <Web3Button></Web3Button>
+      </div>
+      );
     } else return 404;
   };
 
   return (
+    <>
+    
     <div>
       <div className="h-[80%] w-[100%] mb-auto">
         {hello()}
         {view()}
       </div>
-      <div className=" mb-6 ml-0 mr-0 bg-transparent fixed bottom-0 w-full">
-        <div style={{'backdrop-filter': 'blur(14px)'}} className="bg-[#0B0E11] backdrop-blur-lg bg-clip-padding bg-opacity-60  max-h-[4rem] w-[95%] px-6 ml-auto mr-auto rounded-full lg:hidden md:hidden">
+      <div className=" mb-4 ml-0 mr-0 bg-transparent fixed bottom-0 w-full">
+        <div style={{'backdrop-filter': 'blur(14px)'}} className="bg-[#0B0E11] backdrop-blur-lg bg-clip-padding bg-opacity-60  max-h-[4rem] w-[95%] px-5 ml-auto mr-auto rounded-full lg:hidden md:hidden">
           <ul className="flex relative">
             {/**<span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-6`}>
              <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[18px] rounded-tr-[11px] shadow-myShadow1" ></span>
@@ -180,5 +199,7 @@ export default function Home() {
         </div>
       </div>
     </div>
+    
+  </>
   );
 }
