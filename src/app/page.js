@@ -63,21 +63,17 @@ export default function Home() {
         <div>
           <div className="w-[100%] h-auto  mt-2 ">
             <div className="py-4 px-4 ">
-              <div className="w-full bg-[#0B0E11] rounded-full py-0 px-0">
+              <div  style={{'backdrop-filter': 'blur(280px)'}} className="w-full bg-[#0B0E11] rounded-full py-0 px-0">
                 <img
                   className="ml-auto mr-auto w-[95%] h-[50%]"
                   src="./trade.png"
                 />
               </div>
-              <div className="mt-5 bg-[#0B0E11] flex items-center w-[99%] h-[16rem] py-1 px-1  rounded-md">
-                <p className="py-1 px-1 text-center font-bold">
-                  Dive into the future of earning with YieldZone, Where staking
-                  meets Web3 innovation. Elevate your crypto holdings as you
-                  stake securely, earn rewards effortlessly, and shape the
-                  decentralized landscape. Unleash the potential of your assets
-                  today and reap the rewards of tomorrow with YieldZone
-                </p>
-              </div>
+              <div style={{'backdrop-filter': 'blur(180px)'}} className=" mr-auto ml-auto bg-[#0B0E11] mt-6  shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-[95%] h-40 py-1 px-1  rounded-3xl">
+                    <p className="ml-auto mr-auto text-[#dfe5eb] text-center content-center font-bold">
+                      {'Experience the future of earning with YieldZone: Stake securely, earn effortlessly, and shape the decentralized landscape. Unleash your assets potential today for rewards tomorrow'}
+                    </p>
+                  </div>
             </div>
           </div>
           <div className=" ml-auto mt-10 mb-14 mr-auto text-sm flex items-center">
@@ -98,15 +94,15 @@ export default function Home() {
             >
               <div className="w-[100%] mt-5 ">
                 <div className="py-4 px-4 ">
-                  <div style={{'backdrop-filter': 'blur(40px)'}} className="bg-transparent w-[90px] h-[90px] mb-4 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full ">
+                  <div style={{'backdrop-filter': 'blur(80px)'}} className="bg-transparent w-[90px] h-[90px] mb-4 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full ">
                     <img className="" src={`./${more.url}`} />
                   </div>
-                  <div style={{'backdrop-filter': 'blur(40px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-28 h-10 py-1 px-1  rounded-3xl">
+                  <div style={{'backdrop-filter': 'blur(80px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-28 h-10 py-1 px-1  rounded-3xl">
                     <p className="ml-auto mr-auto text-[#dfe5eb] text-center content-center font-bold">
                       {more.name}
                     </p>
                   </div>
-                  <div style={{'backdrop-filter': 'blur(40px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-[90%] mt-4 h-40 py-1 px-1  rounded-3xl">
+                  <div style={{'backdrop-filter': 'blur(80px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-[90%] mt-4 h-40 py-1 px-1  rounded-3xl">
                     <p className="py-1 px-1 text-[#dfe5eb] text-center content-center font-bold">
                       {more.content}
                     </p>
@@ -146,7 +142,7 @@ export default function Home() {
         {view()}
       </div>
       <div className=" mb-0 ml-0 mr-0 bg-transparent fixed bottom-0 w-full">
-        <div className="bg-[#0B0E11] max-h-[4rem] w-[95%] px-6 ml-auto mr-auto rounded-t-xl lg:hidden md:hidden">
+        <div style={{'backdrop-filter': 'blur(16px)'}} className="bg-[#0B0E11] backdrop-blur-lg bg-clip-padding bg-opacity-60  max-h-[4rem] w-[95%] px-6 ml-auto mr-auto rounded-t-xl lg:hidden md:hidden">
           <ul className="flex relative">
             {/**<span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-6`}>
              <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[18px] rounded-tr-[11px] shadow-myShadow1" ></span>
@@ -161,8 +157,9 @@ export default function Home() {
                   }}
                 >
                   <span
-                    className={`text-xl cursor-pointer duration-500 ${
-                      i === active && "-mt-6 text-[#0B0E11]"
+                    style={{}}
+                    className={`text-xl cursor-pointer duration-700 ${
+                      i === active && "-mt-6 bg-clip-padding bg-opacity-60  text-transparent"
                     }`}
                   >
                     <ion-icon name={menu.icon}></ion-icon>
@@ -170,7 +167,7 @@ export default function Home() {
                   <span
                     className={` -mt-1 ${
                       active === i
-                        ? "translate-y-0 duration-700 text-[#359cfc] opacity-100"
+                        ? "translate-y-0 duration-700 text-white opacity-100"
                         : "opacity-0 translate-y-15"
                     }`}
                   >
