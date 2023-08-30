@@ -1,3 +1,5 @@
+import ProviderW3C from './ProviderW3C'
+import Web3Provider from './ProviderW3C'
 import './globals.css'
 import { Inter, Poppins } from 'next/font/google'
 
@@ -14,7 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-      <body className={`${poppins.className} bg-[#cbced1] text-slate-300  `}>{children}</body>
+      <ProviderW3C>
+       <body className={`${poppins.className} bg-[#1E2329] text-slate-300  `}>{children}</body>
+      </ProviderW3C>
     </html>
   )
 }
