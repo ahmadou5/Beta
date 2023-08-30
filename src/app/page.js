@@ -167,7 +167,7 @@ export default function Home() {
                   <span
                     className={` -mt-1 ${
                       active === i
-                        ? "translate-y-0 duration-700 text-white opacity-100"
+                        ? "translate-y-0 duration-700 text-[#359cfc] opacity-100"
                         : "opacity-0 translate-y-15"
                     }`}
                   >
