@@ -94,15 +94,15 @@ export default function Home() {
             >
               <div className="w-[100%] mt-5 ">
                 <div className="py-4 px-4 ">
-                  <div style={{'backdrop-filter': 'blur(80px)'}} className="bg-transparent w-[90px] h-[90px] mb-4 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full ">
+                  <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-transparent w-[90px] h-[90px] mb-4 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full ">
                     <img className="" src={`./${more.url}`} />
                   </div>
-                  <div style={{'backdrop-filter': 'blur(80px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-28 h-10 py-1 px-1  rounded-3xl">
+                  <div style={{'backdrop-filter': 'blur(180px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-28 h-10 py-1 px-1  rounded-3xl">
                     <p className="ml-auto mr-auto text-[#dfe5eb] text-center content-center font-bold">
                       {more.name}
                     </p>
                   </div>
-                  <div style={{'backdrop-filter': 'blur(80px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-[90%] mt-4 h-40 py-1 px-1  rounded-3xl">
+                  <div style={{'backdrop-filter': 'blur(180px)'}} className=" mr-auto ml-auto  bg-transparent shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-[90%] mt-4 h-40 py-1 px-1  rounded-3xl">
                     <p className="py-1 px-1 text-[#dfe5eb] text-center content-center font-bold">
                       {more.content}
                     </p>
