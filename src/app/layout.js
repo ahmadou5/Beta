@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-      <body className={`${inter.className} bg-[#1E2329] text-slate-100  `}>{children}</body>
+      <body className={`${inter.className} bg-[#cbced1] text-slate-900  `}>{children}</body>
     </html>
   )
 }
