@@ -141,8 +141,8 @@ export default function Home() {
         {hello()}
         {view()}
       </div>
-      <div className=" mb-0 ml-0 mr-0 bg-transparent fixed bottom-0 w-full">
-        <div style={{'backdrop-filter': 'blur(14px)'}} className="bg-[#0B0E11] backdrop-blur-lg bg-clip-padding bg-opacity-60  max-h-[4rem] w-[95%] px-6 ml-auto mr-auto rounded-t-xl lg:hidden md:hidden">
+      <div className=" mb-6 ml-0 mr-0 bg-transparent fixed bottom-0 w-full">
+        <div style={{'backdrop-filter': 'blur(14px)'}} className="bg-[#0B0E11] backdrop-blur-lg bg-clip-padding bg-opacity-60  max-h-[4rem] w-[95%] px-6 ml-auto mr-auto rounded-full lg:hidden md:hidden">
           <ul className="flex relative">
             {/**<span className={`bg-blue-500 border-4 duration-500 ${Menus[active].dis} border-black h-16 w-16 absolute rounded-full -top-6`}>
              <span className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[18px] rounded-tr-[11px] shadow-myShadow1" ></span>
