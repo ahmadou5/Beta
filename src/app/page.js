@@ -2,6 +2,7 @@
 import { Nav } from "@/components/Nav";
 
 import { useState } from "react";
+import TypewriterComponent from "typewriter-effect";
 
 export default function Home() {
   const [active, setActive] = useState(0);
@@ -46,9 +47,14 @@ export default function Home() {
         <>
           <div className="ml-6 mr-6 mt-20 mb-5 bg-inherit items-center text-start text-ellipsis text-4xl">
             <h1 className="text-white font-bold ">👋🏽 Welcome to</h1>
-
-            <h1 className="text-[#359cfc] font-bold ">YieldZone</h1>
-
+            <TypewriterComponent
+              className='text-[#359cfc] font-bold'
+              options={{
+                strings:['YieldZone', 'SafeZone', 'EarnZone', 'LearnZone'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
             {/**  <div className=" ml-auto mr-3 text-sm items-end">
           <button className="w-40 h-10 py-1 px-1 rounded-3xl bg-[#359cfc] drop-shadow-3xl shadow-3xl hover:bg-[#589ee0] hover:rounded-2xl"> Connect Wallet </button>
       </div>**/}
