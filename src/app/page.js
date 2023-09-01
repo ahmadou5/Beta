@@ -156,13 +156,13 @@ export default function Home() {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="py-1 px-1 mt-0 mb-5 h-96 w-full rounded-3xl ml-auto mr-auto"
+              className="py-1 px-1 mt-0 mb-5 h-96 w-full rounded-b-3xl ml-auto mr-auto"
             >
               <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-transparent w-[80%] h-[80%] py-1 px-1 mb-5 mt-7 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full ">
                 <img className="" src='./cw.png' />
               </div>
             </div>
-        <p className="mb-5 mt-5">Wallet Connect</p>
+        { account.isConnected && <p className="mb-5 mt-5">Wallet is Connected</p>}
         <Web3Button/>
       </div>
       );
