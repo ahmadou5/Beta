@@ -1,11 +1,12 @@
 "use client";
 
-
+import { useAccount } from "wagmi";
 import { Web3Button } from "@web3modal/react";
 import { useState } from "react";
 import TypewriterComponent from "typewriter-effect";
 
 export default function Home() {
+  const account = useAccount()
   const [active, setActive] = useState(0);
   const Menus = [
     { name: "Home", icon: "home", dis: "translate-x-0", ref: "" },
@@ -39,7 +40,7 @@ export default function Home() {
     { 
       name: "NFT Staking", 
       url: "nft1.png", 
-      content: "💰 Generate crypto earnings with YZ tokens through staking, and sell anytime as you wish.🔄 Reinvest your YZ tokens through staking to unlock even greater potential returns." 
+      content: "🎨 Dive into NFT staking – simply mint your NFTs to get started!🌟 Your NFT creations can now earn rewards through our innovative staking platform." 
     },
   ];
   const hello = () => {
@@ -92,7 +93,7 @@ export default function Home() {
               {" "}
               Explore{" "}
             </button>
-            <Web3Button />
+           
           </div>
           {Mores.map((more, i) => (
             <div
@@ -128,6 +129,7 @@ export default function Home() {
             <div className="h-[5rem]  w-[90%]">
               <p>USDT</p>
               <p>80k</p>
+              {account.address}
             </div>
           </div>
         </div>
@@ -144,9 +146,24 @@ export default function Home() {
     }
     if (active && active === 4) {
       return (
-      <div className="flex items-end justify-center ">
-        <p>Wallet Connect</p>
-        <Web3Button></Web3Button>
+      <div className="flex items-center flex-col justify-center ">
+        <div>
+         
+        </div>
+        <div
+              style={{
+                "background-image": "url(./uu.png)",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+              className="py-1 px-1 mt-0 mb-5 h-96 w-full rounded-3xl ml-auto mr-auto"
+            >
+              <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-transparent w-[80%] h-[80%] py-1 px-1 mb-5 mt-7 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full ">
+                <img className="" src='./cw.png' />
+              </div>
+            </div>
+        <p className="mb-5 mt-5">Wallet Connect</p>
+        <Web3Button/>
       </div>
       );
     } else return 404;
