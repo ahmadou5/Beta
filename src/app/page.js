@@ -4,10 +4,18 @@ import { useAccount } from "wagmi";
 import { Web3Button } from "@web3modal/react";
 import { useState } from "react";
 import TypewriterComponent from "typewriter-effect";
+import { Splide, SplideSlide } from '@splidejs/splide';
 
 export default function Home() {
   const account = useAccount()
   const [active, setActive] = useState(0);
+  const Socials = [
+    {name:'tiktok' , icon: './tiktok.svg'},
+    {name:'tiktok' , icon: './twitter.svg'},
+    {name:'tiktok' , icon: './tg.svg'},
+    {name:'tiktok' , icon: './discord.svg'},
+    
+  ]
   const Menus = [
     { name: "Home", icon: "home", dis: "translate-x-0", ref: "" },
     { name: "Swap", icon: "swap", dis: "translate-x-15", ref: "swap" },
@@ -125,11 +133,21 @@ export default function Home() {
             </div>
           ))}
 
-          <div className="bg-[#0B0E11] mb-40 h-25 w-[95%] flex items-center px-2 py-2 ml-auto mt-20 mr-auto rounded-md lg:hidden md:hidden">
-            <div className="h-[5rem]  w-[90%]">
-              <p>USDT</p>
-              <p>80k</p>
-              {account.address}
+          <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-[#0B0E11] mb-5  w-full h-1/3 flex px-2 py-2 ml-auto mt-5 mr-auto lg:hidden md:hidden">
+            <div className=" ml-auto mr-auto w-full">
+              <p className="text-white flex items-center ml-auto mr-auto mt-5 text-2xl font-thin">Connect With Us</p>
+              <div className="flex mt-6 mb-3 flex-col items-center">
+                {Socials.map((social, index) => (
+                  <>
+                     <div key={index} style={{'backdrop-filter': 'blur(280px)'}} className=" ml-auto  bg-[#1E2329] items-center py-2 px-2 rounded-full mr-auto mt-2 mb-2 w-28 h-28">
+                      <div style={{'backdrop-filter': 'blur(280px)'}} className="w-[80%] h-[80%] mt-1 mb-auto  ml-auto mr-auto  py-1 px-1">
+                        <img className="w-full h-full" src={social.icon}/>
+                      </div>
+                     </div>
+                  </>
+                ))}
+                
+              </div>
             </div>
           </div>
         </div>
@@ -139,6 +157,7 @@ export default function Home() {
       return <h1>Swap page</h1>;
     }
     if (active && active === 2) {
+      console.log('habu pa')
       return <h1>Earn Page</h1>;
     }
     if (active && active === 3) {
@@ -163,7 +182,7 @@ export default function Home() {
               </div>
             </div>
         { account.isConnected && <p className="mb-5 mt-5">Wallet is Connected</p>}
-        <Web3Button/>
+        { account.isConnected? '.': <Web3Button />}
       </div>
       );
     } else return 404;

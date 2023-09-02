@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ionic/cli": "^7.1.1",
+    "@splidejs/splide": "^4.1.4",
     "@web3modal/ethereum": "^2.7.1",
     "@web3modal/react": "^2.7.1",
     "autoprefixer": "10.4.15",
