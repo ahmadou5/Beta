@@ -10,11 +10,35 @@ export default function Home() {
   const account = useAccount()
   const [active, setActive] = useState(0);
   const Socials = [
-    {name:'tiktok' , icon: './tiktok.svg'},
-    {name:'tiktok' , icon: './twitter.svg'},
-    {name:'tiktok' , icon: './tg.svg'},
-    {name:'tiktok' , icon: './discord.svg'},
+    {name:'Tiktok' , icon: './tiktok.svg'},
+    {name:'X' , icon: './twitter.svg'},
+    {name:'Telegram' , icon: './tg.svg'},
+    {name:'Discord' , icon: './discord.svg'},
+    {name: 'Youtube' , icon: './next.svg'}
     
+  ]
+
+  const chains = [
+    {name: 'MATIC' , icon: './matic.svg'},
+    {name: 'BNB' , icon: './bnb.svg'},
+    {name: 'BASE' , icon: './base.svg'},
+    {name: 'OPTIMISM' , icon: './op.svg'},
+    
+
+  ]
+
+  const products =[
+    {name: 'Swap'},
+    {name: 'Staking'},
+    {name: 'NFT-Staking'},
+  ]
+
+  const others =[
+    {name: 'Careers'},
+    {name: 'Blog'},
+    {name: 'Contact-Us'},
+    {name: 'Help-Center'},
+    {name: 'Docs'},
   ]
   const Menus = [
     { name: "Home", icon: "home", dis: "translate-x-0", ref: "" },
@@ -135,21 +159,49 @@ export default function Home() {
 
           <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-[#0B0E11] mb-5  w-full h-1/3 flex px-2 py-2 ml-auto mt-5 mr-auto lg:hidden md:hidden">
             <div className=" ml-auto mr-auto w-full">
-              <p className="text-white flex items-center ml-auto mr-auto mt-5 text-2xl font-thin">Connect With Us</p>
+              <p className="text-white flex items-center ml-auto mr-auto mt-5 text-2xl font-thin">Backed by </p>
               <div className="flex mt-6 mb-3 flex-col items-center">
-                {Socials.map((social, index) => (
+                {chains.map((social, index) => (
                   <>
                      <div key={index} style={{'backdrop-filter': 'blur(280px)'}} className=" ml-auto  bg-[#1E2329] items-center py-2 px-2 rounded-full mr-auto mt-2 mb-2 w-28 h-28">
-                      <div style={{'backdrop-filter': 'blur(280px)'}} className="w-[80%] h-[80%] mt-1 mb-auto  ml-auto mr-auto  py-1 px-1">
-                        <img className="w-full h-full" src={social.icon}/>
+                      <div style={{'backdrop-filter': 'blur(280px)'}} className="w-[80%] h-[80%] mt-3 mb1  ml-auto mr-auto  py-2 px-2">
+                        <img className="w-full h-full mt-auto mb-auto" src={social.icon}/>
                       </div>
                      </div>
                   </>
                 ))}
-                
               </div>
             </div>
           </div>
+          <div>
+            <div>
+              
+            </div>
+            <div className="w-full h-68 flex items-center">
+              <div className="w-[90%] h-64 ml-5 " style={{'backdrop-filter': 'blur(180px)'}}>
+                <div className="font-semibold mb-4 text-blue-500">Socials</div>
+                {Socials.map((social , index) => (
+                  <div key={index}>{social.name}</div>
+                ))}
+              </div>
+              <div className="w-[90%] h-64  " style={{'backdrop-filter': 'blur(180px)'}}>
+                <div className="font-semibold mb-4 text-blue-500">Products</div>
+                {products.map((product, index) => (
+                  <div key={index}>{product.name}</div>
+                ))}
+            </div>
+            <div className="w-[90%] h-64 mr-2 " style={{'backdrop-filter': 'blur(180px)'}}>
+                <div className="font-semibold mb-4 text-blue-500">Company</div>
+                {others.map((product, index) => (
+                  <div key={index}>{product.name}</div>
+                ))}
+            </div>
+          </div>
+          <div>
+            <p className="mb-24 ml-6 font-semibold">© {new Date().getFullYear()} YieldZone</p>
+          </div>
+          </div>
+          
         </div>
       );
     }
@@ -167,7 +219,7 @@ export default function Home() {
       return (
       <div className="flex items-center flex-col justify-center ">
         <div>
-         
+          
         </div>
         <div
               style={{
