@@ -19,10 +19,10 @@ export default function Home() {
   ]
 
   const chains = [
-    {name: 'MATIC' , icon: './matic.svg'},
-    {name: 'BNB' , icon: './bnb.svg'},
+    {name: 'Polygon' , icon: './matic.svg'},
+    {name: 'Binance' , icon: './bnb.svg'},
     {name: 'BASE' , icon: './base.svg'},
-    {name: 'OPTIMISM' , icon: './op.svg'},
+    {name: 'Optimism' , icon: './op.svg'},
     
 
   ]
@@ -80,22 +80,24 @@ export default function Home() {
       return (
         <>
       
-          <div className="ml-6 mr-6 mt-20 mb-5 bg-inherit items-center text-start text-ellipsis text-4xl">
-            <h1 className="text-white font-bold ">👋🏽 Welcome to</h1>
-            <div className=" text-[#359cfc] font-bold ">
-            <TypewriterComponent
-              className=' text-ellipsis  font-bold'
-              options={{
-                strings:['YieldZone.', 'SafeZone.', 'EarnZone.'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+          <div className="ml-6 mr-6 mt-20 flex flex-row mb-5 lg:mb-10 bg-inherit items-center  text-start text-ellipsis text-4xl">
+            <div className='mr-auto'>
+              <h1 className="text-white font-bold ">👋🏽 Welcome to</h1>
+              <div className=" text-[#359cfc] font-bold ">
+              <TypewriterComponent
+                className=' text-ellipsis  font-bold'
+                options={{
+                  strings:['YieldZone.', 'SafeZone.', 'EarnZone.'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
             </div>
             
-            {/**  <div className=" ml-auto mr-3 text-sm items-end">
-          <button className="w-40 h-10 py-1 px-1 rounded-3xl bg-[#359cfc] drop-shadow-3xl shadow-3xl hover:bg-[#589ee0] hover:rounded-2xl"> Connect Wallet </button>
-      </div>**/}
+            <div className=" hidden lg:flex text-sm ml-auto items-end">
+              {<Web3Button/>}
+            </div>
           </div>
         </>
       );
@@ -105,15 +107,15 @@ export default function Home() {
     if (active === 0) {
       return (
         <div>
-          <div className="w-[100%] h-auto  mt-2 ">
-            <div className="py-4 px-4 ">
-              <div  style={{'backdrop-filter': 'blur(280px)'}} className="w-full bg-[#0B0E11] rounded-full py-0 px-0">
+          <div className="w-[100%] h-auto lg:mt-9 mt-2 ">
+            <div className="py-4 px-4 lg:flex lg:flex-row ">
+              <div  style={{'backdrop-filter': 'blur(280px)'}} className="w-full bg-[#0B0E11] lg:w-[45%] shadow-lg bg-clip-padding bg-opacity-60 rounded-full py-0 px-0">
                 <img
-                  className="ml-auto mr-auto w-[95%] h-[50%]"
+                  className="ml-auto mr-auto w-[95%] lg:h-[95%]  h-[50%]"
                   src="./trade.png"
                 />
               </div>
-              <div style={{'backdrop-filter': 'blur(180px)'}} className=" mr-auto ml-auto bg-[#0B0E11] mt-6  shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-[95%] h-40 py-1 px-1  rounded-3xl">
+              <div style={{'backdrop-filter': 'blur(180px)'}} className=" mr-auto ml-auto lg:mt-auto lg:mb-auto bg-[#0B0E11] mt-6 lg:w-[45%] lg:py-4 lg:px-4 shadow-lg bg-clip-padding bg-opacity-60 flex items-center text-ellipsis text-center w-[95%] h-40 py-1 px-1  rounded-3xl">
                     <p className="ml-auto mr-auto text-[#dfe5eb] text-center content-center ">
                       {'Experience the future of earning with YieldZone: Stake securely, earn effortlessly, and shape the decentralized landscape. Unleash your assets potential today for rewards tomorrow'}
                     </p>
@@ -135,7 +137,7 @@ export default function Home() {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="py-1 px-1 mt-14 mb-14 h-96 w-[95%] rounded-3xl ml-auto mr-auto"
+              className="py-1 px-1 mt-14 mb-14 h-96 w-[95%] md:w-[80%] lg:w-[60%] lg:h-2/3 rounded-3xl ml-auto mr-auto"
             >
               <div className="w-[100%] mt-5 ">
                 <div className="py-4 px-4 ">
@@ -157,19 +159,30 @@ export default function Home() {
             </div>
           ))}
 
-          <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-[#0B0E11] mb-5  w-full h-1/3 flex px-2 py-2 ml-auto mt-5 mr-auto lg:hidden md:hidden">
-            <div className=" ml-auto mr-auto w-full">
-              <p className="text-white flex items-center ml-auto mr-auto mt-5 text-2xl font-thin">Backed by </p>
-              <div className="flex mt-6 mb-3 flex-col items-center">
+          <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-[#0B0E11] mb-5 lg:h-96 w-full h-1/3 flex px-2 py-2 ml-auto mt-5 mr-auto lg:flex ">
+            <div className=" ml-auto lg:mt-auto lg:mb-auto mr-auto w-full">
+              <p className="text-white flex items-center ml-8 mr-8 mb-6 shadow-lg backdrop-brightness-100 mt-5 text-2xl font-thin">Powered by </p>
+              <div className="flex  flex-col lg:items-start lg:flex-row mb-9 items-center">
                 {chains.map((social, index) => (
                   <>
-                     <div key={index} style={{'backdrop-filter': 'blur(280px)'}} className=" ml-auto  bg-[#1E2329] items-center py-2 px-2 rounded-full mr-auto mt-2 mb-2 w-28 h-28">
-                      <div style={{'backdrop-filter': 'blur(280px)'}} className="w-[80%] h-[80%] mt-3 mb1  ml-auto mr-auto  py-2 px-2">
+                     <div key={index} style={{'backdrop-filter': 'blur(280px)'}} className=" ml-auto  lg:flex lg:flex-col items-start bg-[#1E2329]  py-2 px-2 rounded-full mr-auto  mt-2 mb-2 w-28 h-28">
+                      <div style={{'backdrop-filter': 'blur(280px)'}} className="w-[80%] h-[80%] mt-3 mb-1 items-start  ml-auto mr-auto  py-2 px-2">
                         <img className="w-full h-full mt-auto mb-auto" src={social.icon}/>
                       </div>
+                      <div className='hidden md:flex lg:flex'> {social.name}</div>
+                      <div className='lg:hidden sm:flex'> {social.name}</div>
                      </div>
+                     
                   </>
                 ))}
+              </div>
+            </div>
+          </div>
+          <div style={{'backdrop-filter': 'blur(180px)'}} className="bg-[#d5d7d8] mb-16 lg:h-96 w-full h-1/3 flex px-2 py-2 ml-auto mt-5 mr-auto lg:flex ">
+            <div className=" ml-auto lg:mt-auto lg:mb-auto mr-auto w-full">
+              <p className="text-white flex items-center ml-8 mr-8 mb-6 shadow-lg backdrop-brightness-100 mt-5 text-4xl font-thin">YieldZone </p>
+              <div className="flex  flex-col lg:items-start lg:flex-row mb-9 items-center">
+                
               </div>
             </div>
           </div>
@@ -177,7 +190,7 @@ export default function Home() {
             <div>
               
             </div>
-            <div className="w-full h-68 flex items-center">
+            <div className="w-full h-68 lg:ml-14 lg:mr-16 flex items-center">
               <div className="w-[90%] h-64 ml-5 " style={{'backdrop-filter': 'blur(180px)'}}>
                 <div className="font-semibold mb-4 text-blue-500">Socials</div>
                 {Socials.map((social , index) => (
@@ -198,7 +211,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <p className="mb-24 ml-6 font-semibold">© {new Date().getFullYear()} YieldZone</p>
+            <p className="mb-24 lg:mb-3 ml-6 font-semibold">© {new Date().getFullYear()} YieldZone</p>
           </div>
           </div>
           
