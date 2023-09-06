@@ -8,7 +8,7 @@ const poppins = Poppins({subsets: ['devanagari'],weight:'500'})
 
 export const metadata = {
   title: 'YieldZone',
-  description: '',
+  description: 'bg-[#1E2329]',
   
 }
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
       <ProviderW3C>
-       <body className={`${poppins.className} bg-[#1E2329] text-slate-300  `}>{children}</body>
+       <body className={`${poppins.className}  text-slate-300  `}>{children}</body>
       </ProviderW3C>
     </html>
   )
