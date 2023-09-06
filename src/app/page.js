@@ -47,7 +47,7 @@ export default function Home() {
               <TypewriterComponent
                 className=' text-ellipsis  font-bold'
                 options={{
-                  strings:['Happy Birthday to lady that has a unique way of making my every day brighter. Your intelligence, kindness, and charm are truly captivating. I hope this year brings you even more incredible experiences and that we get to share some of them together. 🎉🎂😊'],
+                  strings:['Happy Birthday to the lady that has a unique way of making my every day brighter. Your intelligence, kindness, and charm are truly captivating. I hope this year brings you even more incredible experiences and that we get to share some of them together. 🎉🎂😊'],
                   autoStart: true,
                   loop: true,
                 }}
