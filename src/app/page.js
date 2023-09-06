@@ -25,8 +25,8 @@ export default function Home() {
         <>
          <div className="w-[100%] mt-5 flex-col ">
             <div
-              style={{ "backdrop-filter": "blur(180px)" }}
-              className=" mb-5 w-[90%] h-24 flex px-2 py-2 ml-auto mr-auto rounded-2xl items-center text-center "
+              style={{ "backdrop-filter": "blur(18px)" }}
+              className=" mb-5 w-[90%] h-24 flex px-2 py-2 ml-auto mr-auto rounded-2xl shadow-lg bg-clip-padding bg-opacity-60 items-center text-center "
             >
               <p className="text-center font-mono ml-auto mr-auto text-white">
               <TypewriterComponent
@@ -40,8 +40,8 @@ export default function Home() {
               </p>
             </div>
             <div
-              style={{ "backdrop-filter": "blur(180px)" }}
-              className=" mb-16 w-[90%] h-56 flex px-2 py-2 ml-auto rounded-2xl mt-8 mr-auto items-center text-center "
+              style={{ "backdrop-filter": "blur(18px)" }}
+              className=" mb-16 w-[90%] h-56 flex px-2 py-2 ml-auto rounded-2xl shadow-lg bg-clip-padding bg-opacity-60 mt-8 mr-auto items-center text-center "
             >
               <p className="text-center font-mono ml-auto mr-auto text-white">
               <TypewriterComponent
@@ -58,7 +58,7 @@ export default function Home() {
               <img src="./bd.svg" />
             </div>
             <div className="flex items-center">
-                <button  style={{ "backdrop-filter": "blur(18px)" }} className="w-36 h-8 mb-12 mt-14 ml-auto mr-auto bg-slate-400 text-black rounded-3xl" onClick={handleShow}>
+                <button  style={{ "backdrop-filter": "blur(18px)" }} className="w-36 h-8 mb-12 mt-14 ml-auto mr-auto bg-slate-400 text-black rounded-3xl" onClick={handlePray}>
                   Lets Pray  
                 </button>
             </div>
