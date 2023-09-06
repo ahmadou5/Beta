@@ -13,11 +13,12 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
       <ProviderW3C>
-       <body className={`${poppins.className}  text-slate-300  `}>{children}</body>
+       <body  className={`${poppins.className} text-slate-300 w-[100%] `}>{children}</body>
       </ProviderW3C>
     </html>
   )
