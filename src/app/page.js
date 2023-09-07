@@ -9,6 +9,12 @@ import { Splide, SplideSlide } from "@splidejs/splide";
 export default function Home1() {
   const account = useAccount();
   const [active, setActive] = useState(0);
+
+  const link = [
+    {name: 'github', url: './discord.svg'},
+    {name: 'github', url: './tiktok.svg'},
+    {name: 'github', url: './twitter.svg'}
+  ]
   const Socials = [
     { name: "Tiktok", icon: "./tiktok.svg" },
     { name: "X", icon: "./twitter.svg" },
@@ -294,12 +300,13 @@ export default function Home1() {
               <p className="w-[45%] ">
                 © {new Date().getFullYear()} YieldZone
               </p>
-              <div className="w-45% ml-auto mr-4 flex flex-row">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+              <div  className="w-[15%] ml-auto mr-16 flex flex-row">
+              {link.map((links, i) => (
+                <img key={i}  className="w-6 h-6 ml-1 mr-1" src={`./${links.url}`} />
+              ))
+              }
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       );
