@@ -7,8 +7,8 @@ import { Inter, Poppins } from 'next/font/google'
 const poppins = Poppins({subsets: ['devanagari'],weight:'500'})
 
 export const metadata = {
-  title: 'Mermerh`s',
-  description: 'Happy Birthday Mermerh♥️♥️',
+  title: 'YieldZone',
+  description: '',
   
 }
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
       <ProviderW3C>
-       <body  className={`${poppins.className} text-slate-300 w-[100%] `}>{children}</body>
+       <body  className={`${poppins.className} text-slate-300 w-[100%] bg-[#1E2329]`}>{children}</body>
       </ProviderW3C>
     </html>
   )
