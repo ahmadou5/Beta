@@ -7,8 +7,8 @@ import { Inter, Poppins } from 'next/font/google'
 const poppins = Poppins({subsets: ['devanagari'],weight:'500'})
 
 export const metadata = {
-  title: 'YieldZone',
-  description: 'bg-[#1E2329]',
+  title: 'Mermerh`s',
+  description: 'Happy Birthday Mermerh♥️♥️',
   
 }
 

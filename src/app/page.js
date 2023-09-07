@@ -34,17 +34,17 @@ export default function Home() {
     setCount(true);
   };
   const handleExit = () => {
-    alert("Are you leaving??");
+    alert("Are you leaving?? 🥺🥺");
     setShow(true);
     setShow1(false);
     setShowbtn(true);
     setCount(false);
     setShowM(false);
-    alert("Take Care We Love You");
+    alert("Take Care We Love You ♥️♥️");
   };
   const handleMemory = () => {
     setShow(true);
-    alert('Laa Na Manta Da Wani Adduan , Allah Yasa tsayinki Ya Karu')
+    alert('Laa Na Manta Da Wani Adduan , Allah Yasa tsayinki Ya Karu 😊😊')
     setShow1(false);
     setShowbtn(false);
     setCount(false);
@@ -125,7 +125,7 @@ export default function Home() {
                 <TypewriterComponent
                   className=" text-ellipsis  font-bold"
                   options={{
-                    strings: ["Dear!", "Fatima!", "Mermerh!"],
+                    strings: ["Dear!", "Fatima!", "Mermerh!", 'Goggo Fatee ♥️', 'Aunty Fatee 👸🏽'],
                     autoStart: true,
                     loop: true,
                   }}
@@ -140,7 +140,7 @@ export default function Home() {
                   options={{
                     strings: [
                       "7-09-2023 ⏰⏰",
-                      "Your Day!!",
+                      "Your Day!!😊😊",
                       "Your Birthday🎉🎉",
                     ],
                     autoStart: true,
