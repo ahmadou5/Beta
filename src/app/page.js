@@ -172,7 +172,7 @@ export default function Home() {
                 <TypewriterComponent
                   className=" text-ellipsis  font-bold"
                   options={{
-                    strings: ['عيد ميلاد سعيد! أتمنى لك يومًا مليئًا بالسعادة والفرح. أتمنى أن تحقق جميع أمانيك وأحلامك في السنة الجديدة. 🎉🎂😊'],
+                    strings: ['Happy Birthday! I wish you a day filled with happiness and joy. I hope you achieve all your wishes and dreams in the new year. 🎉🎂😊'],
                     autoStart: true,
                     loop: true,
                   }}
