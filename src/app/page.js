@@ -64,7 +64,7 @@ export default function Home() {
                 <TypewriterComponent
                   className=" text-ellipsis font-bold"
                   options={{
-                    strings: ["Happy Birthay Fatima.🎉🎂"],
+                    strings: ["Happy Birthday Fatima.🎉🎂"],
                     autoStart: true,
                     loop: true,
                   }}
@@ -172,9 +172,7 @@ export default function Home() {
                 <TypewriterComponent
                   className=" text-ellipsis  font-bold"
                   options={{
-                    strings: [
-                      "“اللهم اجعل هذا اليوم عيدًا سعيدًا لـك، واجعل كل يوم من أيام حياتك مليئًا بالفرح والنجاح. أسألك أن تقدم لك كل خير في هذه السنة وتحقق لك أمانيك . آمين.” 🙏",
-                    ],
+                    strings: ['عيد ميلاد سعيد! أتمنى لك يومًا مليئًا بالسعادة والفرح. أتمنى أن تحقق جميع أمانيك وأحلامك في السنة الجديدة. 🎉🎂😊'],
                     autoStart: true,
                     loop: true,
                   }}
