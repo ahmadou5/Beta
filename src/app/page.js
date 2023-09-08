@@ -51,6 +51,8 @@ export default function Home1() {
     { name: "Wallet", icon: "wallet", dis: "translate-x-65", ref: "wallet" },
   ];
 
+  const [open, setOpen] = useState(false);
+
   const Mores = [
     {
       name: "Invest Now",
@@ -148,7 +150,7 @@ export default function Home1() {
             </div>
           </div>
           <div className=" ml-auto mt-10 mb-14 mr-auto text-sm flex items-center">
-            <button className="w-40 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] hover:rounded-2xl">
+            <button className="w-40 h-10 py-1 px-1 text-[#1E2329] rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] hover:rounded-2xl">
               {" "}
               Explore{" "}
             </button>
@@ -247,17 +249,17 @@ export default function Home1() {
                     Subscribe to our Weekly News Letter
                   </p>
                   <div className="flex flex-row mt6 items-center mr-3 ">
-                    <div className=" w-[85%] ml-3 mr-3">
+                    <div className=" w-[90%] h-10 ml-3 mr-3">
                       <input
                         type="email"
                         placeholder="AndreCronje@mail.com"
                         className="h-[100%] w-[100%] bg-[#1E2329] px-2 rounded-2xl"
                       />
                     </div>
-                    <div className=" w-[40%] ml-3 mr-3">
-                      <button className="w-[100%] h-[100%] rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] hover:rounded-2xl">
+                    <div className=" w-[50%] h-10 ml-3 mr-3">
+                      <button className="w-[100%] h-[100%] px-1 text-[#1E2329] rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] hover:rounded-2xl">
                         {" "}
-                        Submit
+                        Subscribe
                       </button>
                     </div>
                   </div>
@@ -325,6 +327,8 @@ export default function Home1() {
       return (
         <div className="flex items-center flex-col justify-center ">
           <div></div>
+          {!open && (
+          <>
           <div
             style={{
               "background-image": "url(./uu.png)",
@@ -335,15 +339,46 @@ export default function Home1() {
           >
             <div
               style={{ "backdrop-filter": "blur(180px)" }}
-              className="bg-transparent w-[80%] h-[80%] py-1 px-1 mb-5 mt-7 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full "
+              className="bg-transparent  w-[80%] h-[80%] py-1 px-1 mb-5 mt-7 shadow-lg bg-clip-padding bg-opacity-60 ml-auto mr-auto  flex items-center rounded-full "
             >
               <img className="" src="./cw.png" />
             </div>
+            
           </div>
-          {account.isConnected && (
-            <p className="mb-5 mt-5">Wallet is Connected</p>
+          <div onClick={() => setOpen(true)} className="mt-10 ml-auto mr-auto">
+           <Web3Button />
+          </div>
+          </>
           )}
-          {account.isConnected ? "." : <Web3Button />}
+          
+          { open && (
+            <>
+              <div className="w-full h-full ">
+                <div className="h-56 w-full py-2 px-2">
+                <div className=" ml-auto mt-5 mb-5 mr-auto text-sm flex items-end">
+                  <button onClick={() => setOpen(!true)} className="w-40 h-10 py-1 px-1 rounded-3xl ml-auto mr-5 mb-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
+                    {" "}
+                    Disconnect{" "}
+                  </button>
+                </div>
+                  <div style={{ "backdrop-filter": "blur(18px)" }}  className="h-9 py-2 px-2 text-center rounded-3xl ml-auto mr-auto mb-auto shadow-lg bg-clip-padding bg-opacity-60 bg-[#0B0E11] w-[92%]  text-[#f1f4f8]">address show and copy btn</div>
+                  <div className=" ml-auto mt-10 mb-5 mr-auto text-sm flex items-end">
+                  <button className="w-32 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
+                    {" "}
+                    Send{" "}
+                  </button>
+                  <button className="w-32 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
+                    {" "}
+                    Receive{" "}
+                  </button>
+                </div>
+                </div>
+                <div  style={{ "backdrop-filter": "blur(18px)" }} className="bg-[#0B0E11]  shadow-lg bg-clip-padding bg-opacity-60 py-2 px-2 w-full rounded-t-3xl fixed bottom-0 h-[70%]">
+                  send receive and blnces
+                </div>
+              </div>
+            </>
+          )}
         </div>
       );
     } else return 404;
