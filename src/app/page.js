@@ -373,8 +373,8 @@ export default function Home1() {
                   </button>
                 </div>
                 </div>
-                <div className=" bg-[#359cfc] shadow-lg  py-2 px-2 w-full rounded-t-3xl fixed bottom-0 h-[60%]">
-                  <div  style={{ "backdrop-filter": "blur(8px)" }} className="w-[95%] text-black bg-white py-2 px-2  backdrop-blur-lg bg-clip-padding bg-opacity-60 h-[98%] mt-8 ml-auto mr-auto flex flex-col rounded-3xl">
+                <div className=" bg-[#359cfc] shadow-lg  py-2 px-2 w-full rounded-t-3xl fixed bottom-0 h-[65%]">
+                  <div  style={{ "backdrop-filter": "blur(180px)" }} className="w-[95%] bg-[#1E2329] py-2 px-2  backdrop-blur-lg bg-clip-padding bg-opacity-60 h-[98%] mt-8 ml-auto mr-auto flex flex-col rounded-3xl">
                     <div className="flex flex-row w-full">
                       <p className="font-light text-xl ml-auto mr-auto mt-3 mb-4">Tokens</p>
                       <p className="font-light text-xl ml-auto mr-auto mt-3 mb-4">Balance</p>
