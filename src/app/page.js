@@ -363,31 +363,31 @@ export default function Home1() {
             <>
               <div className="w-[100%] h-[100%] ">
                 <div className="h-56 w-full py-2 px-2">
-                <div className=" ml-auto mt-5 mb-12 mr-auto text-sm flex items-end">
+                <div className=" ml-auto mt-5 mb-8 mr-auto text-sm flex items-end">
                   <Web3NetworkSwitch />
                 </div>
                   <div style={{ "backdrop-filter": "blur(18px)" }}  className="h-9 py-2 px-2 text-center rounded-3xl ml-auto mr-auto mb-auto shadow-lg bg-clip-padding bg-opacity-60 bg-[#0B0E11] w-[92%]  text-[#f1f4f8]">{truncateEthAddress(splited)}</div>
-                  <div className=" ml-auto mt-10 mb-5 mr-auto text-sm flex items-end">
-                  <button className="w-32 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
+                  <div className=" ml-auto mt-10 mb-3 mr-auto text-sm flex items-end">
+                  <button className="w-32 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
                     {" "}
                     Send{" "}
                   </button>
-                  <button className="w-32 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
+                  <button className="w-32 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto  bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
                     {" "}
                     Receive{" "}
                   </button>
                 </div>
                 </div>
-                <div className=" bg-[#359cfc] shadow-lg  py-2 px-2 w-full rounded-t-3xl fixed bottom-0 h-[68%]">
-                  <div  className="w-[98%] bg-[#1E2329] py-2 px-2 h-[99%] mt-4 ml-auto mr-auto flex flex-col rounded-3xl">
+                <div className=" bg-[#359cfc] shadow-lg  py-2 px-2 w-full rounded-t-3xl fixed bottom-0 h-[60%]">
+                  <div  className="w-[98%] bg-[#1E2329] py-3 px-3 h-[99%] mt-4 ml-auto mr-auto flex flex-col rounded-3xl">
                     <div className="flex flex-row w-full">
                       <p className="font-light text-xl ml-auto mr-auto mt-3 mb-4">Tokens</p>
                       <p className="font-light text-xl ml-auto mr-auto mt-3 mb-4">Balance</p>
                     </div>
                     { tokens.map((token, i) => (
                       <div key={i} className="flex flex-row w-ful bg-black rounded-3xl mt-2 mb-2">
-                        <p className="font-light text-xl ml-5 mr-auto mt-3 mb-4">{token.lg}</p>
-                        <p className="font-light text-xl ml-auto mr-6 mt-3 mb-4">{token.bln}</p>
+                        <p className="font-light  ml-5 mr-auto mt-3 mb-4">{token.lg}</p>
+                        <p className="font-light ml-auto mr-6 mt-3 mb-4">{token.bln}</p>
                       </div>
                     ))
                     }
