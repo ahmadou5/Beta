@@ -1,14 +1,16 @@
 "use client";
-
-import { useAccount } from "wagmi";
+import truncate from 'truncate-ethereum-address'
+import { useAccount,useBalance ,useToken } from "wagmi";
 import { Web3Button, Web3NetworkSwitch } from "@web3modal/react";
 import { useState } from "react";
 import TypewriterComponent from "typewriter-effect";
 import { Splide, SplideSlide } from "@splidejs/splide";
+import truncateEthAddress from 'truncate-eth-address';
 
 export default function Home1() {
   const account = useAccount();
   const [active, setActive] = useState(0);
+  const [splited, setSplited] = useState('0x0000000000000000000000000000000dead')
 
   const link = [
     {name: 'github', url: './discord.svg'},
@@ -23,6 +25,12 @@ export default function Home1() {
     { name: "Youtube", icon: "./next.svg" },
   ];
 
+  const tokens = [
+    {name: 'YielZone Token', bln: 6000, lg: 'YZ Token' },
+    {name: 'Ethereum',  bln: 10, lg: 'ETH' },
+    {name: 'BNB',  bln: 3460, lg: 'BNB' },
+    {name: 'MATIC ',  bln: 2322260, lg: 'MATIC' }
+  ]
   const chains = [
     { name: "Polygon", icon: "./matic.svg" },
     { name: "Binance", icon: "./bnb.svg" },
@@ -355,13 +363,10 @@ export default function Home1() {
             <>
               <div className="w-[100%] h-[100%] ">
                 <div className="h-56 w-full py-2 px-2">
-                <div className=" ml-auto mt-5 mb-5 mr-auto text-sm flex items-end">
-                  <button onClick={() => setOpen(!true)} className="w-40 h-10 py-1 px-1 rounded-3xl ml-auto mr-5 mb-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
-                    {" "}
-                    Disconnect{" "}
-                  </button>
+                <div className=" ml-auto mt-5 mb-12 mr-auto text-sm flex items-end">
+                  <Web3NetworkSwitch />
                 </div>
-                  <div style={{ "backdrop-filter": "blur(18px)" }}  className="h-9 py-2 px-2 text-center rounded-3xl ml-auto mr-auto mb-auto shadow-lg bg-clip-padding bg-opacity-60 bg-[#0B0E11] w-[92%]  text-[#f1f4f8]">{account.status}</div>
+                  <div style={{ "backdrop-filter": "blur(18px)" }}  className="h-9 py-2 px-2 text-center rounded-3xl ml-auto mr-auto mb-auto shadow-lg bg-clip-padding bg-opacity-60 bg-[#0B0E11] w-[92%]  text-[#f1f4f8]">{truncateEthAddress(splited)}</div>
                   <div className=" ml-auto mt-10 mb-5 mr-auto text-sm flex items-end">
                   <button className="w-32 h-10 py-1 px-1 rounded-3xl ml-auto mr-auto mb-auto bg-[#359cfc] hover:bg-[#589ee0] text-[#1E2329]">
                     {" "}
@@ -374,16 +379,17 @@ export default function Home1() {
                 </div>
                 </div>
                 <div className=" bg-[#359cfc] shadow-lg  py-2 px-2 w-full rounded-t-3xl fixed bottom-0 h-[68%]">
-                  <div  style={{ "backdrop-filter": "blur(180px)" }} className="w-[95%] bg-[#1E2329] py-2 px-2  backdrop-blur-lg bg-clip-padding bg-opacity-60 h-[98%] mt-8 ml-auto mr-auto flex flex-col rounded-3xl">
+                  <div  className="w-[98%] bg-[#1E2329] py-2 px-2 h-[99%] mt-4 ml-auto mr-auto flex flex-col rounded-3xl">
                     <div className="flex flex-row w-full">
                       <p className="font-light text-xl ml-auto mr-auto mt-3 mb-4">Tokens</p>
                       <p className="font-light text-xl ml-auto mr-auto mt-3 mb-4">Balance</p>
                     </div>
-                    {
-                    <div className="flex flex-row w-full">
-                      <p className="font-light text-xl ml-5 mr-auto mt-3 mb-4">{'ETH'}</p>
-                      <p className="font-light text-xl ml-auto mr-6 mt-3 mb-4">1000</p>
-                    </div>
+                    { tokens.map((token, i) => (
+                      <div key={i} className="flex flex-row w-ful bg-black rounded-3xl mt-2 mb-2">
+                        <p className="font-light text-xl ml-5 mr-auto mt-3 mb-4">{token.lg}</p>
+                        <p className="font-light text-xl ml-auto mr-6 mt-3 mb-4">{token.bln}</p>
+                      </div>
+                    ))
                     }
                     
                   </div>
